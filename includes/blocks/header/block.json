@@ -1,0 +1,17 @@
+{
+    "apiVersion": 2,
+    "name": "bento-blog/header",
+    "title": "Bento Blog Header",
+    "category": "bento",
+    "icon": "heading",
+    "description": "Add a header with bento layouts",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "textdomain": "bento-blog",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css",
+    "viewScript": "file:./build/view.js"
+}

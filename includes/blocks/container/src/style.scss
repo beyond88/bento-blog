@@ -1,0 +1,118 @@
+.wp-block-bento-blog-container {
+  flex: none;
+  position: relative;
+  min-height: 180px;
+  margin-bottom: 20px;
+  .bento-grid {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+      .is-selected & {
+          border: 1px dashed #007cba;
+      }
+
+      &__item {
+          position: absolute;
+          transition: width 0.3s ease, height 0.3s ease;
+      }
+
+      .bento-grid__content {
+          min-height: 180px;
+          width: 100%;
+          .bento-grid__item{
+            transition: all 0.3s ease-in-out;
+            user-select: none;
+            -webkit-user-drag: element;
+          }
+      }
+  }
+
+  @media (min-width: 821px) {
+      .bento-grid__item {
+      //   flex-basis: calc(50% - 10px);
+      //   max-width: calc(50% - 10px);
+      }
+    
+      .bento-grid__item[style*="width:400px"] {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+  }
+    
+  @media (max-width: 820px) {
+      .bento-grid__item {
+          flex-basis: 100%;
+          max-width: 100%;
+      }
+  }  
+}
+
+.block-editor-block-list__layout {
+  min-height: inherit;
+
+  &:empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 180px;
+      padding: 20px;
+      text-align: center;
+  }
+  .wp-block{
+      margin-top: 0px !important;
+  }
+}
+
+.animate__animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.bento-grid__item {
+    position: absolute;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}

@@ -1,0 +1,354 @@
+.wp-block-bento-blog-gravatar {
+    border-radius: 24px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .profile-card {
+        .gravatar-hovercard {
+            display: inline-block;
+            z-index: 10000000;
+        
+            h4, p {
+                margin: 0;
+            }
+        
+            a, i, p, span {
+                color: #000;
+                font-family: SF Pro Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        
+            &__inner {
+                background-color: #fff;
+                border: 1px solid #d8dbdd;
+                border-radius: 4px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-height: 400px;
+                overflow: hidden;
+                padding: 24px 24px 16px;
+                position: relative;
+                width: 400px;
+            }
+        
+            &__header-image {
+                height: 75px;
+                left: 50%;
+                position: absolute;
+                top: 0;
+                transform: translateX(-50%);
+                width: 100%;
+            }
+        
+            &__header {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                z-index: 1;
+            }
+        
+            &__avatar-link, 
+            &__social-link {
+                display: inline-flex;
+            }
+        
+            &__avatar {
+                background-color: #eee;
+                border-radius: 50%;
+            }
+        
+            &__personal-info-link {
+                text-decoration: none;
+            }
+        
+            &__name {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                color: #000;
+                font-family: SF Pro Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 38px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+            }
+        
+            &__job,
+            &__location {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                color: #707070;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+            }
+        
+            &__body {
+                margin-top: 8px;
+                min-height: 42px;
+            }
+        
+            &__description {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+            }
+        
+            &__social-links {
+                align-items: center;
+                display: flex;
+                gap: 4px;
+                margin-top: 16px;
+            }
+        
+            &__buttons {
+                display: flex;
+                gap: 16px;
+                margin-top: 16px;
+            }
+        
+            &__button {
+                background: unset;
+                border: 1px solid rgba(29, 79, 196, .3);
+                border-radius: 4px;
+                color: #1d4fc4;
+                cursor: pointer;
+                font-family: SF Pro Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 21px;
+                min-height: 42px;
+                padding: 8px;
+                width: 100%;
+        
+                &:hover {
+                    border: 1px solid rgba(29, 79, 196, .6);
+                }
+            }
+        
+            &__footer {
+                align-items: center;
+                display: flex;
+                gap: 12px;
+                justify-content: space-between;
+                margin-top: 12px;
+            }
+        
+            &__profile-url {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                color: #707070;
+                overflow: hidden;
+                text-decoration: none;
+                text-overflow: ellipsis;
+                word-break: break-all;
+            }
+        
+            &__profile-link {
+                color: #707070;
+                flex-shrink: 0;
+                text-decoration: none;
+            }
+        
+            &__profile-color {
+                bottom: 0;
+                height: 4px;
+                left: 0;
+                position: absolute;
+                width: 100%;
+            }
+        
+            // Drawer styles
+            &__drawer {
+                bottom: 0;
+                left: 0;
+                overflow: hidden;
+                position: absolute;
+                right: 0;
+                top: 0;
+                visibility: hidden;
+                z-index: 1;
+        
+                &-backdrop {
+                    background-color: rgba(0, 0, 0, .4);
+                    bottom: 0;
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transition: opacity .3s ease-in-out;
+                }
+        
+                &-card {
+                    background-color: #fff;
+                    border-top-left-radius: 4px;
+                    border-top-right-radius: 4px;
+                    bottom: 0;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    left: 0;
+                    max-height: 100%;
+                    padding: 20px 0;
+                    position: absolute;
+                    transform: translate3d(0, 100%, 0);
+                    transition: transform .3s ease-in-out;
+                    width: 100%;
+                }
+        
+                &-header {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 16px;
+                    padding: 0 20px;
+                }
+        
+                &-title {
+                    font-family: SF Pro Text, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 27px;
+                    margin: 0;
+                }
+        
+                &-close {
+                    align-items: center;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0;
+                }
+        
+                &-items {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    list-style: none;
+                    margin: 0;
+                    overflow: auto;
+                    padding: 0 20px;
+                }
+        
+                &-item {
+                    display: flex;
+                    gap: 8px;
+        
+                    &-info {
+                        display: flex;
+                        flex-direction: column;
+                    }
+        
+                    &-label {
+                        font-weight: 600;
+                        line-height: 24px;
+                        text-transform: capitalize;
+                    }
+        
+                    &-link {
+                        color: #1d4fc4;
+                        text-decoration: none;
+        
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+        
+                // Drawer states
+                &--open {
+                    visibility: visible;
+        
+                    .gravatar-hovercard__drawer-backdrop {
+                        opacity: 1;
+                    }
+        
+                    .gravatar-hovercard__drawer-card {
+                        transform: translateZ(0);
+                    }
+                }
+        
+                &--closing {
+                    visibility: visible;
+        
+                    .gravatar-hovercard__drawer-backdrop {
+                        opacity: 0;
+                    }
+        
+                    .gravatar-hovercard__drawer-card {
+                        transform: translate3d(0, 100%, 0);
+                    }
+                }
+            }
+        
+            // Skeleton state
+            &--skeleton {
+                .gravatar-hovercard__avatar-link,
+                .gravatar-hovercard__personal-info-link,
+                .gravatar-hovercard__profile-link,
+                .gravatar-hovercard__profile-url,
+                .gravatar-hovercard__social-link {
+                    background-color: #eee;
+                }
+        
+                .gravatar-hovercard__avatar-link {
+                    border-radius: 50%;
+                    height: 104px;
+                    width: 104px;
+                }
+        
+                .gravatar-hovercard__personal-info-link {
+                    height: 38px;
+                    width: 70%;
+                }
+        
+                .gravatar-hovercard__social-link {
+                    border-radius: 50%;
+                    height: 32px;
+                    width: 32px;
+                }
+        
+                .gravatar-hovercard__profile-url {
+                    height: 21px;
+                    width: 50%;
+                }
+        
+                .gravatar-hovercard__profile-link {
+                    height: 21px;
+                    width: 96px;
+                }
+            }
+        
+            // Error state
+            &--error {
+                .gravatar-hovercard__inner {
+                    align-items: center;
+                    gap: 34px;
+                    justify-content: center;
+                }
+        
+                .gravatar-hovercard__error-message {
+                    color: #707070;
+                }
+            }
+        }
+    }
+}

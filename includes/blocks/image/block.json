@@ -1,0 +1,16 @@
+{
+    "apiVersion": 2,
+    "name": "bento-blog/image",
+    "title": "Bento Blog Image",
+    "category": "bento",
+    "icon": "format-image",
+    "description": "Add bento image block with customizable layouts",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "textdomain": "bento-blog",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css"
+}

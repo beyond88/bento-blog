@@ -1,0 +1,97 @@
+.wp-block-bento-blog-post {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    .bento-blog-post {
+        border-radius: 24px;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+        padding: 1rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+
+        &:hover {
+            background-color: #FBFBFB;
+            border-radius: 24px;
+        }
+
+        .bento-blog-post-wrapper {
+            color: #000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            overflow: hidden;
+
+            .bento-blog-post-content {
+                height: 100%;
+                width: 100%;
+                h2{
+                    font-weight: 600;
+                    margin: 0 0 10px 0;
+                }
+                .bento-blog-read-more{
+                    text-align: left;
+                }
+
+                a{
+                    text-align: left;
+                }
+            }
+
+            .bento-blog-post-featured-image {
+                img{
+                    border-radius: 6px;
+                    width: 100%;
+                }
+            }
+            
+            a {
+                text-decoration: none !important;
+                width: 100%;
+                display: block;
+            }
+        
+            .bento-blog-post-title p {
+                font-size: 0.875rem;
+                line-height: 1.2;
+                margin: 0.75rem auto 0 auto;
+            }
+        
+            .bento-blog-post-excerpt {
+                font-family: var(--inter-font), sans-serif;
+                font-size: 12px;
+                line-height: 16px;
+                font-weight: 400;
+                margin-top: 0.25rem;
+                color: rgba(0, 0, 0, 0.6);
+                overflow: visible;
+                display: block;
+                p{
+                    margin: 0 0 10px 0;
+                }
+                div{
+                    margin: 0 0 10px 0;
+                    p{
+                        line-height: inherit;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .components-placeholder {
+        height: 100%;
+        box-shadow: none;
+    }
+}

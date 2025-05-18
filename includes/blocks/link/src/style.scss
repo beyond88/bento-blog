@@ -1,0 +1,146 @@
+.wp-block-bento-blog-link {
+    border: 1px solid #eee;
+    border-radius: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .bento-blog-link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        a {
+            text-decoration: none !important;
+            width: 100%;
+            display: block;
+        }
+
+        .bento-blog-link-wrapper {
+            align-items: center;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            // margin: 0 auto;
+            overflow: hidden;
+            text-align: center;
+            padding: 18px;
+            line-break: anywhere;
+
+            &:hover{
+                background-color: #fbfbfb;
+                border-radius: 24px;
+            }
+
+            .bento-blog-link-placeholder{
+                font-size: .875rem;
+            }
+
+            .bento-blog-link-content{
+                height: 100%;
+                width: 100%;
+                .bento-blog-link-logo {
+                    aspect-ratio: 1 / 1;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    width: 40px;
+                    height: 40px;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+                    // padding: 0.5rem;
+                    border: 1px solid #E2E2E2;
+                    a{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                a {
+                    text-decoration: none !important;
+                    width: 100%;
+                    display: block;
+                    .bento-blog-link-title{
+                        p {
+                            font-size: .875rem;
+                            line-height: 1.2;
+                            margin: .75rem auto 0 auto;
+                            text-align: left;
+                            color: #010101;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .bento-blog-link-host {
+                        font-family: var(--inter-font), sans-serif;
+                        font-size: 12px;
+                        line-height: 16px;
+                        font-weight: 400;
+                        margin-top: .25rem;
+                        color: rgba(0, 0, 0, .6);
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        p{
+                            color: rgba(0,0,0,.6);
+                            text-align: left;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &[data-size="2x0.5"] {
+        .bento-blog-link-wrapper {
+            flex-direction: row;
+            align-items: center;
+        }
+        .bento-blog-link-logo {
+            margin-right: 1rem;
+        }
+    }
+
+    &[data-size="2x1"],
+    &[data-size="2x2"] {
+        .bento-blog-link-wrapper {
+            flex-direction: row-reverse;
+            .bento-blog-link-featured-image {
+                margin-left: 1rem;
+                width: 100%;
+            }
+        }
+        
+    }
+
+    &[data-size="1x2"] {
+        .bento-blog-link-wrapper {
+            flex-direction: column;
+            .bento-blog-link-featured-image {
+                margin-top: 1rem;
+                width: 100%;
+            }
+        }
+        
+    }
+
+    .bento-blog-link-featured-image {
+        img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #f0f0f0;
+        }
+    }
+
+    .bento-blog-link-loading{
+        p{
+            font-size: .875rem;
+        }
+    }
+
+}

@@ -1,0 +1,17 @@
+{
+    "apiVersion": 2,
+    "name": "bento-blog/link",
+    "title": "Bento Blog Link",
+    "category": "bento",
+    "icon": "external",
+    "description": "Add a link with bento layouts",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "textdomain": "bento-blog",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css",
+    "viewScript": "file:./build/view.js"
+}

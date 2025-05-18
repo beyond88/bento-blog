@@ -1,0 +1,16 @@
+{
+    "apiVersion": 2,
+    "name": "bento-blog/video",
+    "title": "Bento Blog Video",
+    "category": "bento",
+    "icon": "format-video",
+    "description": "Add bento video block with customizable layouts",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "textdomain": "bento-blog",
+    "editorScript": "file:./build/index.js",
+    "editorStyle": "file:./build/index.css",
+    "style": "file:./build/style-index.css"
+}
